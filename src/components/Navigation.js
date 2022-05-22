@@ -37,6 +37,9 @@ const Navigation = (props) => {
           <Anchor to='/book' onClick={() => props.setOpenNavigation(false)}>
             <MenuItem>教材一覧</MenuItem>
           </Anchor>
+          <Anchor to='/log' onClick={() => props.setOpenNavigation(false)}>
+            <MenuItem>ログ一覧</MenuItem>
+          </Anchor>
           <div style={{marginTop: '40px'}}>
             <Anchor to='/userData' onClick={() => props.setOpenNavigation(false)}>
               <MenuItem>ユーザーページ</MenuItem>
