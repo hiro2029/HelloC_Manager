@@ -163,7 +163,8 @@ const BookDetail = () => {
       {questionInBook ? (
         <InfoCardList>
           {questionInBook.map((data) => {
-            return <QuestionInfo data={data.question} key={data.question_id}></QuestionInfo>;
+            return console.log(data);
+            // <QuestionInfo data={data.question} key={data.question_id}></QuestionInfo>;
           })}
         </InfoCardList>
       ) : (
