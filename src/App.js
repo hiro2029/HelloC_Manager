@@ -17,6 +17,7 @@ import LogList from './pages/Log/LogList';
 import GroupDetail from './pages/Group/GroupDetail';
 import BookDetail from './pages/Book/BookDetail';
 import QuestionDetail from './pages/Question/QuestionDetail';
+import LogDetail from './pages/Log/LogDetail';
 
 //問題作成・編集ページ
 import CreateBlankQuestion from './pages/Question/create/CreateBlankQuestion';
@@ -83,7 +84,7 @@ const App = () => {
 
                             <Route render={() => <QuestionDetail />} path='/question/:id(\d+)' />
 
-                            {/* <Route render={() => <LogDetail />} path='/log/:id(\d+)' /> */}
+                            <Route render={() => <LogDetail />} path='/log/:id(\d+)' />
 
                             {/*  問題作成・編集ページのルーティング */}
                             <Route render={() => <CreateBlankQuestion />} path='/question/createBlank' />

@@ -34,7 +34,7 @@ const LogInfo = (props) => {
     // })
   }, []);
   useEffect(() => {
-    getQuestion(props.data.user_id).then((json) => {
+    getQuestion(props.data.question_id).then((json) => {
       if (json.status === 'success') {
         setQuestion(json.content);
       } else {
@@ -46,6 +46,10 @@ const LogInfo = (props) => {
   return (
     <InfoCard>
       <InfoCardDetail>
+        <div>
+          <Label>ログ番号</Label>
+            {props.data.information_log_id}
+        </div>
         <div>
           <Label>学習者</Label>
           {user ? user.name : ''}
