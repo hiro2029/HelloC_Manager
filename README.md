@@ -13,7 +13,7 @@ git clone https://github.com/hiro2029/HelloC_Manager.git
 ```
 
 ```
-
+cd HelloC_Manager
 npm install --legacy-peer-deps
 ```
 
