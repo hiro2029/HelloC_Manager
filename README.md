@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 ```
-git clone https://github.com/HIT-matsumotolab/HelloC_API.git
+git clone https://github.com/hiro2029/HelloC_Manager.git
 ```
 
 ```
