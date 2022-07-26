@@ -1,14 +1,23 @@
-# Getting Started with Create React App
+# Getting Started with HelloC_Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 事前準備
 
-## Available Scripts
+Hello C API の開発に必要なパッケージをインストールする
 
-In the project directory, you can run:
+```
+sudo apt update && sudo apt upgrade -y
+```
 
-### `npm install --legacy-peer-deps`
+```
+git clone https://github.com/HIT-matsumotolab/HelloC_API.git
+```
 
-### `npm start`
+```
+npm install --legacy-peer-deps
+```
+
+## 起動 
+```npm start```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
