@@ -44,34 +44,6 @@ const BookInfo = (props) => {
   }, []);
 
   return (
-    // <InfoCard>
-    //   <InfoCardDetail>
-    //     <div>
-    //       <Label>教材名</Label>
-    //       {props.data.name}
-    //     </div>
-    //     <div>
-    //       <Label>作成者</Label>
-    //       {user ? user.name : ''}
-    //     </div>
-    //     <div>
-    //       <Label>アクセスキー</Label>
-    //       {props.data.access_key}
-    //     </div>
-    //     <div>
-    //       <Label>作成日</Label>
-    //       {props.data.created_at}
-    //     </div>
-    //   </InfoCardDetail>
-    //   <InfoCardButtons>
-    //     <PrimaryButton color='secondary' onClick={() => deleteBook(props.data.book_id, props.data.name)}>
-    //       削除する
-    //     </PrimaryButton>
-    //     <Anchor to={'/book/'.concat(props.data.book_id)}>
-    //       <PrimaryButton>詳細を見る</PrimaryButton>
-    //     </Anchor>
-    //   </InfoCardButtons>
-    // </InfoCard>
     <TableRow key={props.data.book_id} sx={{'&:last-child td, &:last-child th': {border: 0}}}>
       <TableCell component='th' scope='row'>
         {props.data.name}
