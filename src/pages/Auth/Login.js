@@ -10,6 +10,9 @@ import {Breadcrumbs} from '../../components/Breadcrumbs';
 import {ErrorMessage, ErrorMessageWrapper} from '../../components/Utilities/ErrorMessage';
 import {ErrorContext} from '../../contexts/ErrorContext';
 
+// const client = new ApolloClient({
+//   credentials: 'include', // この行を追加する
+// });
 const RegisterForm = styled.div`
   margin-top: 100px;
   width: 60vw;
@@ -46,7 +49,7 @@ const Register = () => {
   const {error, setError, isOpenError, setIsOpenError} = useContext(ErrorContext);
 
   if (authData) {
-    return <Redirect to='/' />;
+    return <Redirect to='/login' />;
   }
 
   const onLogin = () => {
@@ -59,10 +62,10 @@ const Register = () => {
       loginUser(selectUser).then((json) => {
         if (json.status && json.status === 'fail') {
           setIsOpenError(true);
-          setError(json.content);
+          setError(json);
           return;
         }
-        setAuthData(json.content);
+        setAuthData(json);
       });
     }
   };

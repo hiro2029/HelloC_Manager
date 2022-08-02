@@ -9,19 +9,24 @@ class AuthError extends Error {
 }
 
 export const loginUser = async (jsonData) => {
-  return await fetch(`${process.env.REACT_APP_API_URL}/auth/signin`, {
+  return fetch(`${process.env.REACT_APP_API_URL}/auth/signin`, {
     method: 'POST',
+    credentials: 'include',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
       mail: jsonData.mail,
       password: jsonData.password,
     }),
   })
-    .then(async (res) => {
+    .then((res) => {
+      // console.log(res.mail);
       if (!res.ok) {
         throw new AuthError(res);
       }
-      return {status: 'success', content: await res.json()};
+      return res.json();
+    })
+    .then((json) => {
+      return json;
     })
     .catch((error) => {
       console.error('ログイン失敗', error);
